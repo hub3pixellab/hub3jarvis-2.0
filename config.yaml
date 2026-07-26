@@ -1,0 +1,36 @@
+core:
+  data_dir: "./memory"
+  temp_dir: "./memory/temp"
+
+database:
+  mode: "hybrid"
+  sqlite_path: "./memory/jarvis.db"
+
+models:
+  default: "llama3.2:3b"
+  consensus: false
+  available:
+    - name: "llama3.2:3b"
+      display: "Llama 3.2 3B"
+      speed: "fast"
+      default: true
+    - name: "qwen2.5:7b"
+      display: "Qwen 2.5 7B"
+      speed: "medium"
+      default: false
+    - name: "nemomix:12b"
+      display: "NemoMix 12B"
+      speed: "slow"
+      default: false
+
+modules:
+  chat: true
+  second_brain: true
+  self_learning: true
+  policy_engine: true
+  agents: false
+  research: false
+  tools: false
+
+security:
+  auth_required: false
